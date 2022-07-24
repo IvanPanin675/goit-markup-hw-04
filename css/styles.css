@@ -6,6 +6,7 @@
     --footer-adr-text: rgba(255, 255, 255, 0.6);
     --footer-bg: #2F303A;
     --Logo-bt-link: #2196F3;
+    --icon: #AFB1B8
 }
 
 body {
@@ -62,11 +63,10 @@ img {
 }
 
 
-/*header*/
+/*================================header*/
 
 .header-line {
     border-bottom: 1px solid #ECECEC;
-    padding: 25px 15px;
 }
 
 .link.current {
@@ -112,6 +112,7 @@ img {
 .kont:hover,
 .kont:focus {
     color: var(--Logo-bt-link);
+    fill: var(--Logo-bt-link);
 }
 .navi:active {
     color: var(--Logo-bt-link);
@@ -133,8 +134,15 @@ img {
 }
 
 .kont {
+    display: flex;
+    align-items: center;
     color: var(--primary-text-color);
+    fill: var(--primary-text-color);
     font-weight: 500;
+}
+
+.kont > svg {
+    margin-right: 10px;
 }
 
 .podzagolovok {
@@ -150,12 +158,15 @@ img {
 }
 
 /*main*/
-    /*hero*/
+    /*hero===============================================*/
 
 .section-hero {
     padding: 200px 0;
+    background-color: #C4C4C4;
+    background-image: url('../image/bg.jpg'), linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
 .hero {
     font-weight: 900;
     font-size: 44px;
@@ -198,7 +209,11 @@ img {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-    /*особености*/
+    /*особености==================================*/
+
+.section.nopad {
+    padding-bottom: 0;
+}
 
 .item-osob {
     width: 270px;
@@ -227,9 +242,30 @@ img {
     letter-spacing: 0.03em;
 }
 
-.nopad {
-    padding-bottom: 0;
+
+.osob-list-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    padding: 25px 0;
+    background-color: var(--sec-bg-color);
+    margin-bottom: 30px;
 }
+
+
+.osob-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: var(--icon);
+    
+}
+
+
+
 
 /*чем ми занимаемся*/
 
@@ -275,8 +311,87 @@ img {
     letter-spacing: 0.03em;
 }
 
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 16px;
+}
 
-/* footer*/
+
+
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    background-color: var(--Logo-bt-link);
+}
+
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon
+{
+    fill: #ffffff;
+}
+
+.social-list-icon {
+    fill: #AFB1B8;
+}
+
+/* постоянные клиенты=============================== */
+
+.client-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+
+
+.client-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.client-list-link:hover,
+.client-list-link:focus {
+    border-color: var(--Logo-bt-link);
+}
+
+
+.client-list-link:hover .client-list-icon,
+.client-list-link:focus .client-list-icon {
+    fill: var(--Logo-bt-link);
+}
+
+.client-list-icon {
+    justify-content: center;
+    align-items: center;
+    fill: var(--icon);
+}
+
+
+/* ================================footer=====================*/
+
+
+.footer .conteiner {
+    display: flex;
+    gap: 70px;
+    align-items: baseline;
+}
 
 .footer {
     padding-top: 60px;
@@ -309,12 +424,51 @@ img {
     color: rgba(255, 255, 255, 0.6);;
 }
 
+.footer-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footer-text {
+    
+    font-style: normal;
+    font-weight: 700;
+    
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+}
+
+.footer-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);;
+}
+
+.footer-list-link:hover,
+.footer-list-link:focus {
+    background-color: var(--Logo-bt-link);
+}
 
 
-/*для портфолiо сторiнки*/
+.footer-list-icon {
+    fill: #ffffff;
+}
+
+/*====================для портфолiо сторiнки=======================*/
 
 .item-btn:not(:first-child) {
     margin-left: 8px;
+}
+
+.item-sait:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .btn.port {
@@ -346,9 +500,6 @@ img {
     gap: 30px; 
 }
 
-.item-sait {
-    
-}
 
 .block-saits {
     padding: 20px 24px;
