@@ -163,7 +163,7 @@ img {
 .section-hero {
     padding: 200px 0;
     background-color: #C4C4C4;
-    background-image: url('../image/bg.jpg'), linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../image/bg.jpg') ;
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -247,10 +247,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 270px;
     height: 120px;
     border-radius: 4px;
-    padding: 25px 0;
     background-color: var(--sec-bg-color);
     margin-bottom: 30px;
 }
@@ -467,7 +465,12 @@ img {
     margin-left: 8px;
 }
 
-.item-sait:hover {
+.item-sait .link {
+    display: block;
+}
+
+.item-sait .link:hover,
+.item-sait .link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
